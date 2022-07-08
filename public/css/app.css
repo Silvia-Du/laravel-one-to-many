@@ -15,6 +15,37 @@
   font-size: 0.8rem;
 }
 
+._category {
+  border-radius: 5px;
+}
+
+._category .box {
+  background-color: white;
+  border-radius: 5px;
+}
+
+._category .box .element {
+  border-radius: 5px;
+  border: 1px solid cadetblue;
+  width: 49%;
+  transition: all 0.5s;
+}
+
+._category .box .element:hover {
+  transform: scale(1.1);
+  background-color: rgb(83, 139, 141);
+  color: white;
+}
+
+._category .box .element:hover a {
+  text-decoration: none;
+  color: white;
+}
+
+._category ul {
+  list-style: none;
+}
+
 /*!
  * Bootstrap v4.6.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors

@@ -24,13 +24,12 @@
         </thead>
         <tbody>
         @foreach ($posts as $post)
-            @dd($post->category)
             <tr>
                 <td>{{ $post->id }}</td>
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->reading_time }} min</td>
                 <td>{{ $post->author }}</td>
-                {{-- <td>{{ $post->category->name }}</td> --}}
+                <td>{{ $post->category? $post->category->name: '-' }}</td>
                 <td>
                     <a type="button" class="btn btn-info" href="{{ route('admin.posts.show', $post) }}">View more</a>
                     <a type="button" class="btn btn-light" href="{{ route('admin.posts.edit', $post) }}">edit</a>
@@ -48,5 +47,34 @@
         </tbody>
       </table>
       {{ $posts->links() }}
-</div>
+    </div>
+    <div class="category-section my-5 debug">
+        <div class="container py-5">
+            <h2 class="mb-4">Scegli per categoria</h2>
+
+
+                @foreach ($categories as $category)
+                <div class="_category p-1 debug mb-2">
+                    <div class="box p-2 d-flex flex-wrap">
+
+                        <h3 class="w-100 font-weight-bold ml-2 mb-3">{{ $category->name }}</h3>
+
+                            @foreach ($category->posts as $post)
+                                <div class="element p-3 mx-1 mb-2">
+                                    <a href="#">{{ $post->title }}</a>
+                                </div>
+
+                            @endforeach
+                    </div>
+
+
+                </div>
+                @endforeach
+
+
+        </div>
+
+
+
+    </div>
 @endsection

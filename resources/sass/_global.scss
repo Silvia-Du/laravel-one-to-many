@@ -14,3 +14,34 @@
         font-size: 0.8rem;
     }
 }
+
+._category{
+    border-radius: 5px;
+
+    .box{
+        background-color: white;
+        border-radius: 5px;
+        .element{
+            border-radius: 5px;
+            border: 1px solid cadetblue;
+            width: calc(98% / 2);
+            transition: all 0.5s;
+            &:hover{
+                transform: scale(1.1);
+                background-color: rgb(83, 139, 141);
+                color: white;
+
+            }
+
+            &:hover a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+    }
+    ul{
+        list-style: none;
+
+    }
+}

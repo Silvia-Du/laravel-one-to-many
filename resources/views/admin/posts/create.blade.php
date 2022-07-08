@@ -88,7 +88,9 @@
             @enderror
         </div>
 
-        <button type="submit" class="btn btn-primary">Salva</button>
+        <button type="submit" class="btn btn-primary mr-3">Salva</button>
+        <a type="button" class="btn btn-success" href="{{ route('admin.posts.index') }}">Back to list</a>
       </form>
+
 
 @endsection

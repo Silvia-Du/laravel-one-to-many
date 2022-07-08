@@ -19,17 +19,21 @@
     <form action="{{ route('admin.posts.update', $post) }}" method="POST">
         @csrf
         @method('PUT')
+
+        {{-- title --}}
         <div class="mb-3">
           <label for="title" class="form-label">Titolo post</label>
           <input type="text" value="{{ $post->title }}"
           class="form-control @error('title') is-invalid @enderror"
           id="title" name="title" >
           {{-- <p id="error_title"></p> --}}
+
           @error('title')
             <p id="error_title" >{{ $message }}</p>
           @enderror
         </div>
 
+        {{-- image --}}
         <div class="mb-3">
           <label for="image" class="form-label">Link immagine</label>
           <input type="text" value="{{ $post->image }}"
@@ -40,17 +44,22 @@
             <p>{{ $message }}</p>
           @enderror
         </div>
-        <div class="mb-3">
-          <label for="category" class="form-label">Categoria</label>
-          <input type="text" value="{{ $post->category }}"
-          class="form-control @error('category') is-invalid @enderror"
-          id="category" name="category" >
 
-          @error('category')
-            <p>{{ $message }}</p>
-          @enderror
+        {{-- category --}}
+        <div class="mb-3">
+            <select class="form-select p-2" name="category_id">
+                <option value="">Scegli una categoria</option>
+                @foreach ($categories as $category)
+
+                <option
+                 {{ $category->id == old('category_id', $post->category->id)? 'selected': '' }}
+                value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+
+            </select>
         </div>
 
+        {{-- author --}}
         <div class="mb-3">
           <label for="author" class="form-label">Autore</label>
           <input type="text" value="{{ $post->author }}"
@@ -62,6 +71,7 @@
           @enderror
         </div>
 
+        {{-- reading_time --}}
         <div class="mb-3">
             <label for="reading_time" class="form-label">Tempo di lettura</label>
             <input type="text" value="{{ $post->reading_time }}"
@@ -73,6 +83,7 @@
             @enderror
         </div>
 
+        {{-- content --}}
         <div class="mb-3">
             <label for="content" class="form-label">Tetsto</label>
             <textarea

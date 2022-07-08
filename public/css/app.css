@@ -42,7 +42,7 @@
   color: white;
 }
 
-._category ul {
+._category .box .element ul {
   list-style: none;
 }
 

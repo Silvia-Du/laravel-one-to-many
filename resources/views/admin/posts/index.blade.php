@@ -59,12 +59,15 @@
 
                         <h3 class="w-100 font-weight-bold ml-2 mb-3">{{ $category->name }}</h3>
 
-                            @foreach ($category->posts as $post)
+                            @forelse ($category->posts as $post)
                                 <div class="element p-3 mx-1 mb-2">
                                     <a href="#">{{ $post->title }}</a>
                                 </div>
-
-                            @endforeach
+                            @empty
+                                <div class="element p-3 mx-1 mb-2">
+                                    <p>Non ci sono post per questa categoria</p>
+                                </div>
+                            @endforelse
                     </div>
 
 

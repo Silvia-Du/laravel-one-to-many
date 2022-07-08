@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+
     <h1 class="my-5">Tutti i tuoi post</h1>
 
     @if (session('prodotto cancellato'))
@@ -23,13 +24,13 @@
         </thead>
         <tbody>
         @foreach ($posts as $post)
-
+            @dd($post->category)
             <tr>
                 <td>{{ $post->id }}</td>
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->reading_time }} min</td>
                 <td>{{ $post->author }}</td>
-                <td>{{ $post->category }}</td>
+                {{-- <td>{{ $post->category->name }}</td> --}}
                 <td>
                     <a type="button" class="btn btn-info" href="{{ route('admin.posts.show', $post) }}">View more</a>
                     <a type="button" class="btn btn-light" href="{{ route('admin.posts.edit', $post) }}">edit</a>

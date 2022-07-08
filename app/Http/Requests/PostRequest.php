@@ -29,7 +29,6 @@ class PostRequest extends FormRequest
             'image'=> 'required | min:5 | max:255',
             'reading_time'=> 'required | min:1 | max:4',
             'author'=> 'required | min:3 | max:30',
-            'category'=> 'required | min:3 | max:20',
         ];
     }
 
@@ -55,9 +54,6 @@ class PostRequest extends FormRequest
             'author.min'=> 'Devi iserire almeno :min caratteri',
             'author.max'=> 'Non superare i :max caratteri',
 
-            'category.required'=> 'Questo campo è obbligatorio',
-            'category.min'=> 'Devi iserire almeno :min caratteri',
-            'category.max'=> 'Non superare i :max caratteri',
 
         ];
     }

@@ -49354,16 +49354,15 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 
 var app = new Vue({
   el: '#app'
-});
-$().ready(function () {
-  $('form').submit(function (event) {
-    if ($('#title').val().length == 0) {
-      $('#error_title').show('slow').text('il titolo è un campo obbligatorio').fadeOut(4000); // console.log('ciao');
-    }
-
-    event.preventDefault();
-  });
-});
+}); // $().ready(function(){
+//     $('form').submit(function(event){
+//         if($('#title').val().length == 0){
+//             $('#error_title').show('slow').text('il titolo è un campo obbligatorio').fadeOut(4000);
+//             // console.log('ciao');
+//         }
+//         event.preventDefault();
+//     })
+// })
 
 /***/ }),
 

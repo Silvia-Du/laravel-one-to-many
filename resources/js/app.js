@@ -31,14 +31,14 @@ const app = new Vue({
     el: '#app',
 });
 
-$().ready(function(){
+// $().ready(function(){
 
-    $('form').submit(function(event){
+//     $('form').submit(function(event){
 
-        if($('#title').val().length == 0){
-            $('#error_title').show('slow').text('il titolo è un campo obbligatorio').fadeOut(4000);
-            // console.log('ciao');
-        }
-        event.preventDefault();
-    })
-})
+//         if($('#title').val().length == 0){
+//             $('#error_title').show('slow').text('il titolo è un campo obbligatorio').fadeOut(4000);
+//             // console.log('ciao');
+//         }
+//         event.preventDefault();
+//     })
+// })

@@ -14,7 +14,12 @@
             <h3>Titolo:{{ $post->title }}</h3>
             <p>Tempo di lettura:{{ $post->reading_time }} minuti</p>
             <p>Autore:{{ $post->author }}</p>
-            <p>Categoria: {{ $post->category }}</p>
+
+            @if ($post->category)
+                <p>Categoria: {{ $post->category->name }}</p>
+            @endif
+
+
             <h5>Contenuto:</h5>
             <p>{{ $post->content }}</p>
         </div>

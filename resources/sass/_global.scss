@@ -7,13 +7,41 @@
     background-color: rgba(95, 158, 160, 0.568);
 }
 
-.create{
+
+
+//CREATE
+
+.create, .edit{
     p{
         color: red;
         font-weight: bold;
         font-size: 0.8rem;
     }
+
+    .btn{
+        text-transform: uppercase;
+        padding: 10px 15px;
+    }
+
+    h5.back{
+
+        &:hover a{
+            text-decoration: none;
+            color: rgb(31, 108, 252)
+        }
+        &:hover i{
+            color: rgb(31, 108, 252)
+        }
+        a{
+            color: rgb(26, 24, 24);
+            font-weight: bold;
+        }
+        i{
+            font-size: 0.8rem;
+        }
+    }
 }
+
 
 ._category{
     border-radius: 5px;

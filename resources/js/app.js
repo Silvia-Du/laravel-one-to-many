@@ -31,6 +31,8 @@ const app = new Vue({
     el: '#app',
 });
 
+//***** QUI TEST CON JQUERY PER VALIDAZIONE LATO FRONT */
+
 // $().ready(function(){
 
 //     $('form').submit(function(event){
@@ -42,3 +44,4 @@ const app = new Vue({
 //         event.preventDefault();
 //     })
 // })
+

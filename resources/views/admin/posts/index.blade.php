@@ -6,8 +6,8 @@
     <h1 class="my-5">Tutti i tuoi post</h1>
 
     @if (session('prodotto cancellato'))
-    <div class="debug p-3 rounded-3">
-        <p>{{ session('prodotto cancellato') }}</p>
+    <div class="debug p-3 mb-3 rounded-3">
+        <p class="mb-0">{{ session('prodotto cancellato') }}</p>
     </div>
     @endif
 

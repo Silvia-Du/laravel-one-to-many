@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container create">
-    <h1 class="my-5">Create Pag</h1>
+    <h1 class="my-5">Crea un nuovo Post!</h1>
 
     @if($errors->any())
         <div class="alert-danger py-3">
@@ -14,7 +14,6 @@
             </ul>
         </div>
     @endif
-
 
     <form action="{{ route('admin.posts.store') }}" method="POST">
         @csrf
@@ -88,8 +87,11 @@
             @enderror
         </div>
 
-        <button type="submit" class="btn btn-primary mr-3">Salva</button>
-        <a type="button" class="btn btn-success" href="{{ route('admin.posts.index') }}">Back to list</a>
+        <button type="submit" class="btn btn-primary mr-4 rounded-pill">Pubblica corso</button>
+        <h5 class="d-inline back">
+            <i class="fa-solid fa-arrow-left"></i>
+            <a href="{{ route('admin.posts.index') }}">Torna alla lista</a>
+        </h5>
       </form>
 
 

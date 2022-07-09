@@ -27,33 +27,25 @@ class PostRequest extends FormRequest
             'title'=> 'required | min:3 | max:50',
             'content'=> 'required | min:50',
             'image'=> 'required | min:5 | max:255',
-            'reading_time'=> 'required | min:1 | max:4',
-            'author'=> 'required | min:3 | max:30',
+            'reading_time'=> 'required | min:1 | max:60 | numeric',
+            'author'=> 'required | min:3 | max:50',
         ];
     }
 
     public function messages()
     {
         return [
-            'title.required'=> 'Questo campo è obbligatorio',
-            'title.min'=> 'Devi iserire almeno :min caratteri',
-            'title.max'=> 'Testo troppo lungo, non superare i :max caratteri',
 
-            'content.required'=> 'Questo campo è obbligatorio',
-            'content.min'=> 'Content deve contenere almeno :min caratteri',
+            'required' => 'il campo :attribute è obbligatorio',
 
-            'image.required'=> 'Questo campo è obbligatorio',
-            'image.min'=> 'Devi iserire almeno :min caratteri',
-            'image.max'=> 'Testo troppo lungo, non superare i :max caratteri',
-
-            'reading_time.required'=> 'Questo campo è obbligatorio',
-            'reading_time.min'=> 'Devi iserire almeno :min caratteri',
-            'reading_time.max'=> 'Non superare i :max caratteri',
-
-            'author.required'=> 'Questo campo è obbligatorio',
-            'author.min'=> 'Devi iserire almeno :min caratteri',
-            'author.max'=> 'Non superare i :max caratteri',
-
+            'min' => [
+                'string' => 'il campo :attribute deve essere di almeno :min caratteri',
+                'numeric' => 'il valore di :attribute non può essere inferiore a :min'
+            ],
+            'max' => [
+                'string' => 'il campo :attribute non può avere piu di :max caratteri',
+                'numeric' => 'il valore di :attribute non può essere superiore a :max '
+            ]
 
         ];
     }

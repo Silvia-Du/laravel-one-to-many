@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container create">
-    <h1 class="my-5">Edit Pag</h1>
+<div class="container edit">
+    <h1 class="my-5">Modifica il tuo post: {{ $post->title }}</h1>
 
     @if($errors->any())
         <div class="alert-danger py-3">
@@ -94,7 +94,11 @@
             @enderror
         </div>
 
-        <button type="submit" class="btn btn-primary">Salva</button>
-      </form>
+    </form>
+    <button type="submit" class="btn btn-primary mr-4 rounded-pill">Pubblica corso</button>
+    <h5 class="d-inline back">
+        <i class="fa-solid fa-arrow-left"></i>
+        <a href="{{ route('admin.posts.index') }}">Torna alla lista</a>
+    </h5>
 
 @endsection

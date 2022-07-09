@@ -9,9 +9,38 @@
   background-color: rgba(95, 158, 160, 0.568);
 }
 
-.create p {
+.create p,
+.edit p {
   color: red;
   font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.create .btn,
+.edit .btn {
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
+
+.create h5.back:hover a,
+.edit h5.back:hover a {
+  text-decoration: none;
+  color: rgb(31, 108, 252);
+}
+
+.create h5.back:hover i,
+.edit h5.back:hover i {
+  color: rgb(31, 108, 252);
+}
+
+.create h5.back a,
+.edit h5.back a {
+  color: rgb(26, 24, 24);
+  font-weight: bold;
+}
+
+.create h5.back i,
+.edit h5.back i {
   font-size: 0.8rem;
 }
 

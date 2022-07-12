@@ -33,11 +33,14 @@
                 <td>
                     <a type="button" class="btn btn-info" href="{{ route('admin.posts.show', $post) }}">View more</a>
                     <a type="button" class="btn btn-light" href="{{ route('admin.posts.edit', $post) }}">edit</a>
-                    <form
-                    class="d-inline" action="{{ route('admin.posts.destroy', $post) }}" method="POST" onsubmit="return confirm('Confermi l\'eliminazione di{{ $post->title }}?')">
+
+                    <form class="d-inline"
+                    action="{{ route('admin.posts.destroy', $post) }}"
+                    onsubmit="return confirm('Confermi l\'eliminazione di{{ $post->title }}?')"
+                    method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-dark">Delete</button>
+                        <button type="submit" class="btn btn-dark">Elimina</button>
                     </form>
 
                 </td>

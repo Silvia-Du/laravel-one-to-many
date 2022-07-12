@@ -87,7 +87,7 @@
             @enderror
         </div>
 
-        <button type="submit" class="btn btn-primary mr-4 rounded-pill">Pubblica corso</button>
+        <button type="submit" class="btn btn-primary mr-4 rounded-pill">Pubblica Post</button>
         <h5 class="d-inline back">
             <i class="fa-solid fa-arrow-left"></i>
             <a href="{{ route('admin.posts.index') }}">Torna alla lista</a>

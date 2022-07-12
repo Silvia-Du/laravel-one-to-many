@@ -23,7 +23,7 @@
         {{-- title --}}
         <div class="mb-3">
           <label for="title" class="form-label">Titolo post</label>
-          <input type="text" value="{{ $post->title }}"
+          <input type="text" value="{{ old('title', $post->title ) }}"
           class="form-control @error('title') is-invalid @enderror"
           id="title" name="title" >
           {{-- <p id="error_title"></p> --}}
@@ -36,7 +36,7 @@
         {{-- image --}}
         <div class="mb-3">
           <label for="image" class="form-label">Link immagine</label>
-          <input type="text" value="{{ $post->image }}"
+          <input type="text" value="{{ old('image', $post->image ) }}"
           class="form-control @error('image') is-invalid @enderror"
           id="image" name="image" >
 
@@ -62,7 +62,7 @@
         {{-- author --}}
         <div class="mb-3">
           <label for="author" class="form-label">Autore</label>
-          <input type="text" value="{{ $post->author }}"
+          <input type="text" value="{{ old('author', $post->author ) }}"
           class="form-control @error('author') is-invalid @enderror"
           id="author" name="author" >
 
@@ -74,7 +74,7 @@
         {{-- reading_time --}}
         <div class="mb-3">
             <label for="reading_time" class="form-label">Tempo di lettura</label>
-            <input type="text" value="{{ $post->reading_time }}"
+            <input type="text" value="{{ old('reading_time', $post->reading_time ) }}"
             class="form-control @error('reading_time') is-invalid @enderror"
             id="reading_time" name="reading_time" placeholder="per es: 5">
 
@@ -88,7 +88,7 @@
             <label for="content" class="form-label">Tetsto</label>
             <textarea
             class="form-control @error('content') is-invalid @enderror"
-            name="content" id="content" cols="30" rows="10">{{ $post->content }}</textarea>
+            name="content" id="content" cols="30" rows="10">{{ old('content', $post->content ) }}</textarea>
             @error('content')
                 <p>{{ $message }}</p>
             @enderror

@@ -15,7 +15,7 @@ class Post extends Model
         'image',
         'reading_time',
         'author',
-        'category'
+        'category_id'
     ];
 
 

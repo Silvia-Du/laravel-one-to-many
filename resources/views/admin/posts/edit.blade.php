@@ -8,7 +8,6 @@
         <div class="alert-danger py-3">
             <ul>
                 @foreach ($errors->all() as $error)
-
                 <li>{{ $error }}</li>
                 @endforeach
             </ul>
@@ -52,7 +51,7 @@
                 @foreach ($categories as $category)
 
                 <option
-                 {{ $category->id == old('category_id', $post->category->id)? 'selected': '' }}
+                 {{-- {{ $category->id == old('category_id', $post->category->id)? 'selected': '' }} --}}
                 value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
 
@@ -94,11 +93,11 @@
             @enderror
         </div>
 
+        <button type="submit" class="btn btn-primary mr-4 rounded-pill">Pubblica corso</button>
+        <h5 class="d-inline back">
+            <i class="fa-solid fa-arrow-left"></i>
+            <a href="{{ route('admin.posts.index') }}">Torna alla lista</a>
+        </h5>
     </form>
-    <button type="submit" class="btn btn-primary mr-4 rounded-pill">Pubblica corso</button>
-    <h5 class="d-inline back">
-        <i class="fa-solid fa-arrow-left"></i>
-        <a href="{{ route('admin.posts.index') }}">Torna alla lista</a>
-    </h5>
 
 @endsection

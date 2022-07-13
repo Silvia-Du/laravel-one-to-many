@@ -64,7 +64,7 @@
 
                             @forelse ($category->posts as $post)
                                 <div class="element p-3 mx-1 mb-2">
-                                    <a href="#">{{ $post->title }}</a>
+                                    <a href="{{ route('admin.posts.show', $post) }}">{{ $post->title }}</a>
                                 </div>
                             @empty
                                 <div class="element p-3 mx-1 mb-2">
